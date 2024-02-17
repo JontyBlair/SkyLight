@@ -1,0 +1,3 @@
+const sb = window.supabase;
+
+export const supabase = sb.createClient("https://lieweefmzlptwgfheedh.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxpZXdlZWZtemxwdHdnZmhlZWRoIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTE2NDA1MjUsImV4cCI6MjAwNzIxNjUyNX0.9tQWKK0_qoxEvFEzOp4ebZNmqiXM5D7YZgaRNft8dLM")

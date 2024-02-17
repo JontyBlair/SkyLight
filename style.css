@@ -1,0 +1,212 @@
+:root {
+    --progress-value-1: 0;
+    --progress-value-2: 0;
+    --progress-value-3: 0;
+    --progress-value-4: 0;
+    --progress-value-5: 0;
+}
+
+#gas {
+    position: relative;
+    font-family: 'Lexend', sans-serif;
+    font-size: 40px;
+    height: 40px;
+    top: 38px;
+}
+
+#ac1 {
+    background: 
+    radial-gradient(closest-side, white 69%, transparent 70% 100%),
+    conic-gradient(#0076BD calc(var(--progress-value-1) * 1%), #e0e8f7 0);
+}
+
+#ac2 {
+    background: 
+    radial-gradient(closest-side, white 69%, transparent 70% 100%),
+    conic-gradient(#0076BD calc(var(--progress-value-2) * 1%), #e0e8f7 0);
+}
+
+#ac3 {
+    background: 
+    radial-gradient(closest-side, white 69%, transparent 70% 100%),
+    conic-gradient(#0076BD calc(var(--progress-value-3) * 1%), #e0e8f7 0);
+}
+
+#ac4 {
+    background: 
+    radial-gradient(closest-side, white 69%, transparent 70% 100%),
+    conic-gradient(#0076BD calc(var(--progress-value-4) * 1%), #e0e8f7 0);
+}
+
+#ac5 {
+    background: 
+    radial-gradient(closest-side, white 69%, transparent 70% 100%),
+    conic-gradient(#0076BD calc(var(--progress-value-5) * 1%), #e0e8f7 0);
+}
+
+#right {
+    align-self: flex-end !important;
+}
+
+#left {
+    align-self: flex-start !important;
+}
+
+/*
+.activitiesprogress::before {
+    animation: progress 2s 1 forwards;
+    user-select: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -o-user-select: text;
+}
+*/
+
+.activitiesprogress {
+    text-decoration: none;
+    justify-content: center;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.activityDiv {
+    width: 30vw;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nameDiv {
+    text-align: center;
+    white-space: nowrap;
+    font-family: 'Lexend', sans-serif;
+    line-height: 1.5;
+    font-size: 24px;
+    height: inherit;
+    width: inherit;
+    margin-top: 20px;
+}
+
+.timer {
+    color: #0076BD;
+    position: absolute;
+    font-family: 'Lexend', sans-serif;
+    top: 68vh;
+    left: 9vw;
+}
+
+.level {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    min-width: 650px;
+    width: 50vw;    
+}
+
+.level2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80vw;
+}
+
+.headerDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 5vh;
+    margin-top: 5vh;
+    height: 60vh;
+    text-align: center;
+    width: inherit;
+    background-color: #e6e6e6;
+    font-size: 48px;
+}
+
+.footerDiv {
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: inherit;
+}
+
+.startButton {
+    border: none;
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+    color: white;
+    font-size: 32px;
+    background-color: #0076BD;
+    width: 200px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.stopButton {
+    border: none;
+    cursor: pointer;
+    font-family: 'Lexend', sans-serif;
+    color: white;
+    font-size: 32px;
+    background-color: #303030;
+    margin: 0;
+    left: 84%;
+    top: 50%;
+    line-height: 1.8;
+    text-decoration: none;
+    text-align: center;
+    width: 200px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.starRating {
+    border: none;
+}
+
+@media screen and (max-width: 800px) {
+    .footerDiv {
+        flex-direction: column;
+        padding: 5vh;
+        height: 25vh;
+    }
+}
+
+.star {
+    font-size: 50px;
+}
+
+.checked {
+    color: orange;
+}
+
+.icon {
+    margin: 8px;
+    height: 64px;
+    width: 64px;
+}
+
+.black {
+    color: #000000;
+}
+
+.disabled {
+    background-color: #303030 !important;
+}
