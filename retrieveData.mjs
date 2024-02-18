@@ -15,7 +15,6 @@ async function retrieveData() {
             console.error("Error fetching data:", error);
             return null;
         } else {
-            console.log(data);
             return data;
         }
     } catch (error) {
