@@ -2,16 +2,26 @@ import { supabase } from "./supabase.mjs";
 import { userData } from './signin.mjs';
 
 async function retrieveData() {
-    const ud = await userData;
-    const uid = ud.user.id;
+    try {
+        const ud = await userData();
+        const uid = ud.user.id;
 
-    const { data, error } = await supabase
-    .from('userdata')
-    .select()  
-    .eq('uuid', uid)
+        const { data, error } = await supabase
+            .from('userdata')
+            .select()  
+            .eq('uuid', uid);
 
-    console.log(data);
-    return data;
+        if (error) {
+            console.error("Error fetching data:", error);
+            return null;
+        } else {
+            console.log(data);
+            return data;
+        }
+    } catch (error) {
+        console.error("An error occurred:", error);
+        return null;
+    }
 }
 
-export const updateUser = retrieveData();
+export { retrieveData as updateUser };
